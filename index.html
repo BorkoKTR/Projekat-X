@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Navbar with Inline Login Form in Dropdown</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<style>
+		body{
+			background: url(./images/bioskop.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+			-o-background-size: cover;
+		}
+	</style>
+</head> 
+<body>
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+                <div class="navbar-header d-flex col">
+						<span class="navbar-brand"> <i class="fa fa-film"></i> F i l m s k i <b>  P a m f l e t i </b><i class="fa fa-film"></i></span>   		
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="mainpage.html" class="nav-link">Galerija</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Kontakt</a></li>			
+        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                            <li class="nav-item dropdown">
+                                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-pencil-square-o"></i> Signup</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <form  id="sign_up_form" class="form-inline login-form" class="needs-validation" novalidate>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+												<input type="text" class="form-control" placeholder="Ime" required>
+												
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                                <input type="text" class="form-control" placeholder="Prezime" required>
+                                            </div>
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                                    <input type="email" class="form-control" placeholder="E-mail adresa" required>
+                                                </div>
+                                                                                    <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                                <input type="text" class="form-control" placeholder="Lozinka" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Signup</button>
+                                        </form>                        
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <li class="nav-item dropdown">
+                            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-user-o"></i> Login</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <form id="log_in_form" class="form-inline login-form" class="needs-validation" novalidate>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                            <input type="email" class="form-control" placeholder="E-mail adresa" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                            <input type="password" class="form-control" placeholder="Lozinka" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </form>                        
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div style="text-align: center;">
+                <br>
+                <h2 style="text-align: center; color: #26bb84; margin-top: 2%;">Dobrodošli u prvu online bazu podataka sa pamfletima za filmove!</h2>
+                <div id="centralni">
+                    <br>
+                    <h2>Filmski <span style="color:#26bb84;">Pamfleti</span></h2>
+                    <br>
+                    Ovaj projekat je nastao kao završni rad na IT prekvalifikaciji na Matematičkom fakultetu u Beogradu. Sadrži skenirane verzije filmskih pamfleta koji su se dobijali prilikom projekcija pedesetih i šezdesetih godina u SFRJ. Pamfleti su deo privatne kolekcije i želja nam je bila da ih podelimo sa Vama.
+                    <br>
+                    <br>
+                    <span style="color: brown;"> Uživajte! </span>
+                </div>
+
+            </div>
+            <script src="signupScript.js"></script>
+            <script src="loginScript.js"></script>
+
+            </body>
+</html>                                                                                                                
