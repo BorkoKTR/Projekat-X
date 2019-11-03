@@ -1,22 +1,24 @@
 
 $(document).on('submit', '#log_in_form', function(){
 
-    var log_in_form=$(this);
-    var form_data=JSON.stringify(log_in_form.serializeObject());
+    var form_data = JSON.stringify({
+        "email": $('#emailLogin').val(),
+        "password": $('#passwordLogin').val()
+    });
+
+    alert(form_data);
 
     $.ajax({
-        url: "api/login.php",
+        url: "../Projekat/php/login.php",
         type : "POST",
         contentType : 'application/json',
         data : form_data,
         success : function(result) {
-
-            $('#response');
-            log_in_form.find('input').val('');
+            window.location.href = "../mainpage.html"
         },
         error: function(xhr, resp, text){
 
-            $('#response').html("<div class='alert alert-danger'>Unable to log in. Please contact admin.</div>");
+            alert("<div class='alert alert-danger'>Greška u logovanju. Ako nemate profil registrujte se. U slučaju da imate profil kontaktirajte administratora.</div>");
         }
     });
  

@@ -12,6 +12,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style1.css">
+<script src="./js/signupScript.js"></script>
 <style>
 		body{
 			background: url(./images/bioskop.jpg) no-repeat center center fixed;
@@ -48,20 +49,20 @@
                                         <form  id="sign_up_form" class="form-inline login-form" class="needs-validation" novalidate>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-												<input type="text" class="form-control" placeholder="Ime" required>
+												<input type="text" name="firstname" id="firstname" class="form-control" placeholder="Ime" required>
 												
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-                                                <input type="text" class="form-control" placeholder="Prezime" required>
+                                                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Prezime" required>
                                             </div>
                                             <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                                                    <input type="email" class="form-control" placeholder="E-mail adresa" required>
+                                                    <input type="email" name="email" id="email" class="form-control" placeholder="E-mail adresa" required>
                                                 </div>
                                                                                     <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                                <input type="text" class="form-control" placeholder="Lozinka" required>
+                                                <input type="password" name="password" id="password" class="form-control" placeholder="Lozinka" required>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Signup</button>
                                         </form>                        
@@ -77,11 +78,11 @@
                                     <form id="log_in_form" class="form-inline login-form" class="needs-validation" novalidate>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                                            <input type="email" class="form-control" placeholder="E-mail adresa" required>
+                                            <input type="email" id="emailLogin" name="emailLogin" class="form-control" placeholder="E-mail adresa" required>
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                            <input type="password" class="form-control" placeholder="Lozinka" required>
+                                            <input type="password" id="passwordLogin" name="passwordLogin" class="form-control" placeholder="Lozinka" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Login</button>
                                     </form>                        
@@ -105,8 +106,8 @@
                 </div>
 
             </div>
-            <script src="signupScript.js"></script>
-            <script src="loginScript.js"></script>
+
+           <script src="./js/loginScript.js"></script>
 
             </body>
 </html>                                                                                                                

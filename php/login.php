@@ -3,7 +3,7 @@ include_once './config/database.php';
 require "../vendor/autoload.php";
 use \Firebase\JWT\JWT;
 
-//header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
@@ -35,7 +35,7 @@ if($num > 0){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $id = $row['id'];
     $firstname = $row['name'];
-    $lastname = $row['last_name'];
+    $lastname = $row['lastname'];
     $password2 = $row['password'];
 
     if(password_verify($password, $password2))
